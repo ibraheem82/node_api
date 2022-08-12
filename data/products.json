@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1",
+    "name": "Chevrolet",
+    "description": "Also known as Chevy, which represents half of the General Motors total global value. This car has ranked in the top 3 when it came to reliability and durability at an international level. This brand is sold in more than 100 countries and has maintained a good car brand value in and around the globe, in which the U.S has the largest selling and manufacturing of this car brand. It ranked 23rd in the 2019 global index customer reports in terms of reliability and safety. It has also earned the title of the ‘most dependable small cars’, ‘Mid-size sports car’, ‘Large SUV’ and many more in the count ",
+    "price": "$2000"
+  },
+
+  {
+    "id": "2",
+    "name": "Honda",
+    "description": "A car brand which prioritizes longevity over anything. This is considered to be the most reliable brands in between the customers. An automobile company which well-versed its prices. A Japanese car manufacture company which has paved its way through the global market. This car brand has been consistent when it comes to durability and always ranked under top 10 lists for the most reliable car brands which are technologically equipped. With low-cost repairs and fewer repair statements.",
+    "price": "$9000"
+  },
+
+  {
+    "id": "3",
+    "name": "Nissan",
+    "description": "Over the years, Nissan has been a highly competitive brand globally and marked its existence with great generosity. While being fuel-efficient and with great cargo space, this car brand has been a choice of the customers since the day it set off its mark as an automobile company. It has been consistent in terms of the ranking of being the most reliable automobile brands and have savoured the fact that this Japanese automobile company is here to stay and make innovations worth seeing.",
+    "price": "$2599"
+  },
+
+  {
+    "id": "4",
+    "name": "Ford",
+    "description": "Renowned for its rigorous customer support, ford has been a constant choice for the buyers with unbeatable value and up-to-date technologically advanced features. Ford is said to be excellent when it comes to SUV’s and trucks and has been among the top in the charts with its models. Over the century this car brand has introduced a bunch of eye-opening innovations to the world which has still not stopped, each new model or feature introduced by the automobile company is distinct and different from the previous one.",
+    "price": "$6900"
+  },
+
+  {
+    "id": "5",
+    "name": "Fiat",
+    "description": "Reintroduced in US in 2011 with a retro look, this car brand has established a huge name for itself after then. An Italian car brand, which is known to be the world’s oldest automobile brand, specializes in making small cars with attractive outlook and classic looks. Fiat has been consistent with its exquisite exterior designing and impressing its customers with an exclusive rich look. Though it is expensive it is one of the most valued cars in and around the globe with a high rate of reselling value.",
+    "price": "$2739"
+  },
+
+  {
+    "id": "6",
+    "name": "Jeep",
+    "description": "The only brand which sells the most amount of exclusive SUV’s. This car brand is all about off-roading since the first day it got established as an automobile company. Its models offer turbo diesel, which makes it a beast which is unstoppable when it comes to off-roading. Built by the American Bantam Car Company, the automobile has its way back since even the times of World War- II. With providing a spacious model, this car brand is also renowned for its exclusive exterior designs.",
+    "price": "$6900"
+  },
+
+  {
+    "id": "7",
+    "name": "Jeep",
+    "description": "The only brand which sells the most amount of exclusive SUV’s. This car brand is all about off-roading since the first day it got established as an automobile company. Its models offer turbo diesel, which makes it a beast which is unstoppable when it comes to off-roading. Built by the American Bantam Car Company, the automobile has its way back since even the times of World War- II. With providing a spacious model, this car brand is also renowned for its exclusive exterior designs.",
+    "price": "$2783"
+  },
+
+  {
+    "id": "8",
+    "name": "Volkswagen",
+    "description": "This brand holds an extraordinary position in the automobile industry, with owning a large variety of other brands or either partnering with them. This car brand is attentive enough with it comes to detailing of their model, each model is well detailed with the best technological features as well as well-equipped model design. Customers find this car brand to be the most stylish and comfortable amongst the other car brands in terms of its design and affordability with a favourable service cost.",
+    "price": "$6900"
+  },
+
+  {
+    "id" : "9",
+    "name": "Volvo",
+    "description": "With heated seats, mind-blowing interiors and high-quality audio systems, this car brand is a pack of a whole new travelling experience for its passengers. It gives quality with luxury to its customers/ passengers with its varied range of models which are amongst the top in the charts. For many of the customers, Volvo is the brand they turn up to when they are looking for the utmost safety features amongst the other varied car brands. It a choice which was embraced by its passengers.",
+    "price" : "$6900"
+},
+
+{
+    "id" : "10",
+    "name": "Jaguar",
+    "description": "Owned by Tata group of companies, this car brand has its very own variability and a level of classiness that cannot be compared with other automobile companies. While taking care of the safety measures of the passengers with taking due care of providing a technology well researched and tested, this car brand has shined its way out in and around the globe with a high level of resale values. Some of the best models being Jaguar XJL, Jaguar XE and so many more.",
+    "price" : "$6900"
+    }
+]
