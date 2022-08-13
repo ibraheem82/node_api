@@ -1,4 +1,4 @@
-const products = require('../data/products')
+let products = require('../data/products')
 const {v4: uuidv4} = require('uuid')
 const { writeDataToFile } = require('../utils')
 
@@ -48,10 +48,21 @@ function update(id, product) {
     return new Promise((resolve, reject) => {
         // * Will coming as an array so need to find the correct index of the product we want to update.
         const index = products.findIndex((p) => p.id === id)
-        products[index] = {id,  ...product}
+        products[index] = {id, ...product}
          writeDataToFile('./data/products.json', products)
         //  * update the product specific index
          resolve(products[index])
+  })
+}
+
+function remove(id) {
+    return new Promise((resolve, reject) => {
+        // * for each of all products [id] if not equal to the (id) that is passed in.
+        // * will filter whatever (id) that is passed in
+        products = products.filter((p) => p.id !== id)
+         writeDataToFile('./data/products.json', products)
+        //  * update the product specific index
+         resolve()
   })
 }
 
@@ -60,5 +71,6 @@ module.exports = {
     findAll, 
     findById,
     create,
-    update
+    update,
+    remove
 }
