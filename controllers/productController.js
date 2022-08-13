@@ -41,6 +41,7 @@ async function createProduct(req, res, id) {
         }
         // ! [201] created
         res.writeHead(201, { "Content-Type": "application/json" })
+        // ** will give us a new product
         const newProduct = Product.create(product)
         return res.end(JSON.stringify(newProduct))
     } catch (error) {
@@ -51,4 +52,5 @@ async function createProduct(req, res, id) {
 module.exports = {
   getProducts,
   getProduct,
+  createProduct
 };
