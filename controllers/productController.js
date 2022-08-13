@@ -79,7 +79,7 @@ async function updateProduct(req, res, id) {
           description: description || product.description,
           price: price || product.price,
       }
-        const updProduct = await Product.upaate(id, productData)
+        const updProduct = await Product.update(id, productData)
           // ! [201] created
         res.writeHead(201, { "Content-Type": "application/json" })
         // ** will give us a new product
