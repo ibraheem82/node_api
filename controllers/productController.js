@@ -13,6 +13,9 @@ async function getProducts(req, res) {
   }
 }
 
+
+
+
 //*  @desc Gets Single Product
 //*  @route Gets /api/product/:id
 async function getProduct(req, res, id) {
@@ -91,9 +94,30 @@ async function updateProduct(req, res, id) {
   }
 }
 
+
+//*  @desc Delete  All Products
+//*  @route DELETE /api/products
+async function deleteProduct(req, res) {
+  try {
+    const product = await Product.findById(id);
+    if (!product) {
+      res.writeHead(404, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ message: "Product Not Found" }));
+    } else {
+      // * [await] beacuse it is going to be Asynchronous
+      await Product.remove(id)
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({message: `Product ${id} removed`}));
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 module.exports = {
   getProducts,
   getProduct,
   createProduct,
-  updateProduct
+  updateProduct,
+  deleteProduct
 };
