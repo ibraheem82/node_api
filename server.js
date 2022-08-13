@@ -1,30 +1,30 @@
-const http = require('http');
+const http = require("http");
 // * Using destructuring
-const { getProducts }  = require('./controllers/productController')
+const { getProducts, getProduct, createProduct } = require("./controllers/productController");
 
+const server = http.createServer((req, res) => {
+  if (req.url === "/api/products" && req.method === "GET") {
+    // * Coming from our controller.
+    getProducts(req, res);
+  } else if (
+    req.url.match(/\/api\/products\/([0-9]+)/) &&
+    req.method === "GET"
+  ) {
+    // * wiil turn it into an array
+    // * will give us the [ID] of the each product that is passed in.
+    const id = req.url.split("/")[3];
+    getProduct(req, res, id);
+  } else if (req.url === '/api/products' && req.method === "POST") {
+    createProduct(req, res)
 
+  }  else {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ message: "Route not found." }));
+  }
+});
+const PORT = process.env.PORT || 8000;
 
-
-const server =  http.createServer((req, res) => {
-    if(req.url === '/api/products' && req.method === 'GET'){
-
-            // * Coming from our controller.
-            getProducts(req, res)
-    } else {
- res.writeHead(404, {'Content-Type': 'application/json'})
-res.end(JSON.stringify({message: "Route not found."}))
-    }
-})
-const PORT  = process.env.PORT || 8000
-
-
-
-
-
-
-
-
-server.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 // res.writeHead(200, {'Content-Type': 'application/json'})
 // res.statusCode = 200
 // res.setHeader = ('Content-Type', 'text/html')
