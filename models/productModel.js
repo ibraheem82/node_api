@@ -32,6 +32,7 @@ function findById(id) {
 
 function create(product) {
     return new Promise((resolve, reject) => {
+        // * wiil generate a unique (id) for each product created.
         const newProduct = {
            id: uuidv4(), ...product}
         //    * wiil add to the existing products.
@@ -43,8 +44,21 @@ function create(product) {
 
 
 
+function update(id, product) {
+    return new Promise((resolve, reject) => {
+        // * Will coming as an array so need to find the correct index of the product we want to update.
+        const index = products.findIndex((p) => p.id === id)
+        products[index] = {id,  ...product}
+         writeDataToFile('./data/products.json', products)
+        //  * update the product specific index
+         resolve(products[index])
+  })
+}
+
+
 module.exports = {
     findAll, 
     findById,
-    create
+    create,
+    update
 }
