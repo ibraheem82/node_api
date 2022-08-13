@@ -34,16 +34,35 @@ async function getProduct(req, res, id) {
 //*  @route POST /api/product/:id
 async function createProduct(req, res, id) {
     try {
-        const product = {
-            title: 'test product',
-            description : 'my name is ibraheem omikunle',
-            price: 100
-        }
-        // ! [201] created
+        // const product = {
+        //     title: 'test product',
+        //     description : 'my name is ibraheem omikunle',
+        //     price: 100
+        // }
+
+        let body = ''
+        req.on('data', (chunk) => {
+          // *will return a buffer, taking the buffer and converting to string.
+          body += chunk.toString()
+        })
+        req.on('end', async () => {
+          // * will have access to body
+         const {title, description, price} = JSON.parse(body)
+
+        //  * will take what is coming from the parsed body.
+         const product = {
+          title,
+          description,
+          price,
+      }
+        const newProduct = await Product.create(product)
+          // ! [201] created
         res.writeHead(201, { "Content-Type": "application/json" })
         // ** will give us a new product
-        const newProduct = await Product.create(product)
         return res.end(JSON.stringify(newProduct))
+        })
+
+       
     } catch (error) {
       console.log(error);
     }
