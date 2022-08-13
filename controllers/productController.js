@@ -29,6 +29,7 @@ async function getProduct(req, res, id) {
   }
 }
 
+
 //*  @desc Create a Product
 //*  @route POST /api/product/:id
 async function createProduct(req, res, id) {
