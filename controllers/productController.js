@@ -97,7 +97,7 @@ async function updateProduct(req, res, id) {
 
 //*  @desc Delete  All Products
 //*  @route DELETE /api/products
-async function deleteProduct(req, res) {
+async function deleteProduct(req, res, id) {
   try {
     const product = await Product.findById(id);
     if (!product) {
